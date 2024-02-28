@@ -52,6 +52,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             copd_count = copd_count + 1;
         }
 
+	//creating the function to calculate the final percentages and to display the results
+	function calculateResults(){
+		//creatinig variables to store the calculated percentages, and performing arthmetic to determine these percentages
+		var a_Percent = asthma_count/4 * 100;
+		var c_Percent = copd_count/4 * 100;
+		//code to alter HTML content which will aid in displaying the results in a easy manner
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is asthma =" + a_Percent + "<br> Probability it is COPD =" + c_Percent;
+	}
 
 </script>	
 
@@ -125,6 +134,76 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three" onclick= "copdAdd();"class="w3-btn w3-grey w3-round"> No </a>
 	</div>
 </div>	
+
+	<!-- code to create page with third question-->
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--display question 3-->
+	<p>Have you had pneumonia</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
+	<a href="#four" onclick= "copdAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#four" onclick= "asthmaAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>
+
+<!-- code to create page with fourth question-->
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--display question 4-->
+	<p>Do you habe high blood pressure?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
+	<a href="#five" onclick= "copdAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#five" onclick= "asthmaAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>
+
+<!--code to create fifth page which asks user to click button which calculates results -->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--displaying instructions to user-->
+	<p>Click below button to get results!</p>
+	<!-- creating a single button that is linked to the function which calculates the results-->
+	<a href="#six" onclick= "calculateResults();" class="w3-btn w3-grey w3-round"> Calculate Results </a>
+	</div>
+</div>
+
+<!--code to create last page which will show the results to the user-->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Final Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p> Your Results</p>
+	<!-- creating one last button to display the already calculated results-->
+	<a onclick = "calculateResults();" class="w3-btn w3-grey w3-round"> Get Results </a>
+	<!--code needed to change HTMl content-->
+	<p id="results"></p>
+	</div>
+</div>
+
+</div>
+
+<!-- code for the footer of all pages created-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
 	
 </body>
 </html>
