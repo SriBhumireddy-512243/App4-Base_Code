@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-To determine whether an individual has asthma or COPD 
+To determine whether an individual has asthma or Chronic Obstructive Pulmonary Disorder(COPD) 
  
 Known Issues:
 Not completely accurate and doctor consultations are still needed
@@ -38,7 +38,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	//code initializing and creating variables for asthma count and COPD count, setting them equal to 0
+        var asthma_count = 0;
+        var copd_count = 0;
+
+	/*creating the functions that adds to the appropritate count based on what button is clicked and these 
+	will be called on when button is clicked*/
+	function asthmaAdd(){
+            asthma_count = asthma_count + 1;
+        }
+
+        function copdAdd(){
+            copd_count = copd_count + 1;
+        }
 
 </script>	
 
