@@ -52,6 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             copd_count = copd_count + 1;
         }
 
+
 </script>	
 
 
@@ -79,9 +80,51 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+<!code to create page with introductory page-->	
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Asthma or COPD?</h1>
+</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have asthma but wonder if it is COPD. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<!--code to create page with first question -->
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+	<!--display question 1-->
+        <p>Symptoms include wheezing, coughing, shortness of breath, and chest tightness or pain.  Are your symptoms constant or sudden?</p>
+	<!--creating two buttons with functions attached them which are called if clicked on-->
+	<a href="#two" onclick= "copdAdd();" class="w3-btn w3-grey w3-round"> Constant </a>
+	<a href="#two" onclick= "asthmaAdd();"class="w3-btn w3-grey w3-round"> Sudden </a>
+    	</div>
+
+</div>
+<!-- code to create page with second question-->
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<!--creating header-->
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<!--display question 2-->
+	<p>Symptoms include wheezing, coughing, shortness of breath, and chest tightness or pain.  Have you noticed these symptoms from childhood? </p>
+	<!--creating two buttons with functions attached them which are called if clicked on, but the functions are switched to match appropriate symptoms-->
+	<a href="#three" onclick= "asthmaAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#three" onclick= "copdAdd();"class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+</div>	
 	
 </body>
 </html>
